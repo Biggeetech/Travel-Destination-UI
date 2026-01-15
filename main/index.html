@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teavel Plannner</title>
+    <link rel="icon" href="/image/favicon/favicon.ico" type="image/png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../src/output.css">
+</head>
+<style>
+
+</style>
+<body class=" ">
+   <header class="w-full max-w-8xl mx-auto flex justify-between items-center bg-black/70 fixed top-0 z-50 py-4 px-4">
+
+    <h1 class="text-2xl font-bold text-gray-200">BigGee Tech</h1>
+
+    <!-- Desktop Nav -->
+    <nav class="hidden md:block">
+        <ul class="flex gap-8">
+            <li><a class="text-gray-200  hover:text-yellow-400" href="#home">Home</a></li>
+            <li><a class="block text-gray-200 hover:text-yellow-400" href="#gallery">Gallery</a></li>
+            <li><a class="text-gray-200  hover:text-yellow-400" href="#tourPackage">Tour Package</a></li>
+            <li><a class="text-gray-200  hover:text-yellow-400" href="#about">About</a></li>
+            <li><a class="text-gray-200 hover:text-yellow-400" href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Mobile Hamburger Button -->
+    <button id="menu-btn" class="md:hidden text-yellow-400 text-3xl">
+        ☰
+    </button>
+
+</header>
+
+<!-- Mobile Menu -->
+<div id="mobile-menu"
+     class="md:hidden bg-black/90 text-white w-full absolute top-16 left-0 p-6 space-y-4 hidden transition-all duration-300">
+
+    <a class="block text-yellow-400 hover:text-yellow-200" href="#home">Home</a>
+    <a class="block text-yellow-400 hover:text-yellow-200" href="#gallery">Gallery</a>
+    <a class="block text-yellow-400 hover:text-yellow-200" href="#tourPackage">Tour Package</a>
+    <a class="block text-yellow-400 hover:text-yellow-200" href="#about">About</a>
+    <a class="block text-yellow-400 hover:text-yellow-200" href="#contact">Contact</a>
+
+</div>
+
+    <!-- HOME SECTION -->
+    <section id="home" class="h-screen w-full bg-cover bg-center flex items-center justify-center" style="background-image:url(/image/david-vives-ELf8M_YWRTY-unsplash.jpg);">
+        <div class="bg-black/70 rounded-lg mt-80 max-w-5xl mx-auto">
+            <h1 class="text-2xl font-bold text-center text-yellow-400">Travel Preference</h1>
+            <form class="grid grid-cols-1 md:grid-cols-3 gap-6 mx-4 mb-6 mt-6 text-center">
+
+                <label class="p-3 rounded bg-white/80 text-black">
+                    Destination Type:
+                    <select name="type">
+                        <option value="beach">Beach</option>
+                        <option value="mountain">Mountain</option>
+                        <option value="city">City</option>
+                        <option value="fountain">Fountain</option>
+                        <option value="seaside">Seaside</option>
+                    </select>
+                </label>
+
+                <label class="p-3 rounded bg-white/80 text-black">
+                    <input type="date" name="start-date" required />
+                </label>
+
+                <label class="p-3 rounded bg-white/80 text-black">
+                    <input type="date" name="end-date" required />
+                </label>
+
+                <label class="p-3 rounded bg-white/80 text-black">
+                    Destination:
+                    <select name="destination">
+                        <option value="bali">Bali</option>
+                        <option value="swiss">Swiss</option>
+                        <option value="dubi">Dubi</option>
+                        <option value="maidives">Maidives</option>
+                        <option value="japan">Japan</option>
+                        <option value="singapore">Singapore</option>
+                        <option value="thailand">Thailand</option>
+                    </select>
+                </label>
+
+                <label class="p-3 rounded bg-white/80 text-black">
+                    Travelers:
+                    <input type="number" min="1" value="1">
+                </label>
+
+                <label class="p-3 rounded bg-white/80 text-black">
+                    Days:
+                    <input type="number" min="3" value="3">
+                </label>
+            </form>
+            <div class="bg-yellow-400 hover:bg-yellow-600 cursor-pointer transition-all flex justify-center text-center p-4 mb-4 mx-4 rounded">
+                <button class="">Book Now</button>
+            </div>   
+        </div>    
+    </section>
+
+
+    <!-- NEWSLETTER -->
+    <section class="bg-yellow-400 py-16 text-center text-black">
+        <h2 class="text-3xl font-bold">Subscribe for Travel Deals</h2>
+        <p class="mt-2 text-sm">Get exclusive offers and updates straight to your inbox.</p>
+
+        <div class="mt-6 flex justify-center">
+            <input type="email" placeholder="Enter your email" class="p-3 w-64 rounded-l bg-white text-black focus:outline-none" />
+            <button class="bg-black text-yellow-400 px-6 py-3 rounded-r hover:bg-black/80">Subscribe</button>
+        </div>
+    </section>
+
+
+    <!-- RECOMMENDATION SECTION -->
+
+    <section class="max-w-full mx-auto py-20 px-6  bg-black/70">
+
+        <h2 class="text-yellow-400 text-center font-bold text-3xl mb-6">Destination recommended</h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+
+            <div class="border border-yellow-400  text-center rounded-3xl transform transition duration-300 hover:scale-105">
+                <img class="w-full h-72 object-cover rounded-t-3xl" src="/image/bail.jpeg" alt="Bali">
+                <h3 class="text-yellow-400 text-lg mt-3 font-bold">Bali, Indonesia</h3>
+                <p class="text-white text-sm mt-3 mb-3">Perfect for relaxation and adventure.</p>
+            </div>
+            
+            <div class="border border-yellow-400  text-center rounded-3xl transform transition duration-300 hover:scale-105">
+                <img class="w-full h-72 object-cover rounded-t-3xl" src="/image/switzland.jpeg" alt="swissland">
+                <h3 class="text-yellow-400 text-lg mt-3 font-bold">Swiss Alps, Switzerland</h3>
+                <p class="text-white text-sm mt-3 mb-3">Ideal for nature lovers and photographers.</p>
+            </div>
+            
+            <div class="border border-yellow-400  text-center rounded-3xl transform transition duration-300 hover:scale-105">
+                <img class="w-full h-72 object-cover rounded-t-3xl" src="/image/Dubi.jpeg" alt="Dubi">
+                <h3 class="text-yellow-400 text-lg mt-3 font-bold"> Dubai, UAE </h3>
+                <p class="text-white text-sm mt-3 mb-3">Modern, glamorous, and full of activities.</p>
+            </div>
+            
+            <div class="border border-yellow-400  text-center rounded-3xl transform transition duration-300 hover:scale-105">
+                <img class="w-full h-72 object-cover rounded-t-3xl" src="/image/maldives.jpeg" alt="maldives">
+                <h3 class="text-yellow-400 text-lg mt-3 font-bold">Maldives</h3>
+                <p class="text-white text-sm mt-3 mb-3">A paradise for relaxation and couples.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- GALLERY -->
+<section id="gallery" class="bg-black py-20 px-6">
+  <h2 class="text-3xl text-center font-bold text-yellow-400 mb-10">Travel Gallery</h2>
+
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+  
+    <img src="/image/eddy-billard-JOoOPt8tTPY-unsplash.jpg" class="h-64 w-full object-cover rounded-xl transform hover:scale-105 transition">
+    <img src="/image/joey-nicotra-VDZAcY54cig-unsplash.jpg" class="h-64 w-full object-cover rounded-xl transform hover:scale-105 transition">
+    <img src="/image/hans-2Kln_zjjIYs-unsplash.jpg" class="h-64 w-full object-cover rounded-xl transform hover:scale-105 transition">
+    <img src="/image/shifaaz-shamoon-O0xQcGATOw4-unsplash.jpg" class="h-64 w-full object-cover rounded-xl transform hover:scale-105 transition">
+    <img src="/image/jason-mavrommatis-vBmXXZrM7tA-unsplash.jpg" class="h-64 w-full object-cover rounded-xl transform hover:scale-105 transition">
+    <img src="/image/tron-le-JsuBKjHGDMM-unsplash.jpg" class="h-64 w-full object-cover rounded-xl transform hover:scale-105 transition">
+
+  </div>
+</section>
+    
+    <!-- TOUR PACKAGE SECTION -->
+    <section id="tourPackage" class="max-w-7xl mx-auto py-20 px-6">
+        <h1 class="text-3xl font-bold text-yellow-400 text-center mb-10">Popular Tour Package</h1>
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+            
+            <div class="bg-black border text-center border-yellow-500 rounded overflow-hidden transform transition duration-300 hover:scale-110">
+                <img src="/image/Bali has a Varied landscape of hills and….jpeg" class="w-full h-48 object-cover" />
+                    <h3 class="text-xl font-bold text-white mt-2">Bali Getaway</h3>
+                    <p class="text-gray-300 text-sm mt-2">Beautiful beaches, temples & waterfalls.</p>
+                    <p class="mt-3 text-yellow-400 font-semibold">5 Days • From $399</p>
+                    <button class="mt-4 p-20 mb-4 bg-yellow-500 hover:bg-yellow-400 text-black py-2 rounded-lg font-semibold transform transition hover:scale-110">
+                        Book Now
+                    </button>
+            </div>
+        
+            <div class="bg-black border text-center border-yellow-500 rounded overflow-hidden transform transition duration-300 hover:scale-110">
+                <img src="/image/thailand.jpeg" class="w-full h-48 object-cover" />
+                <h3 class="text-xl font-bold text-white ">Thailand</h3>
+                <p class="text-gray-300 text-sm mt-2">Snowy mountains & scenic train tours.</p>
+                <p class="mt-3 text-yellow-400 font-semibold">7 Days • From $899</p>
+                <button class="mt-4 p-20 bg-yellow-500 hover:bg-yellow-400 text-black py-2 rounded-lg font-semibold transform transition hover:scale-110">
+                    View Details
+                </button>
+            </div>
+            
+            <div class="bg-black border text-center border-yellow-500 rounded overflow-hidden transform transition duration-300 hover:scale-110">
+                <img src="/image/Singapore.jpeg" class="w-full h-48 object-cover" />
+                 <h3 class="text-xl font-bold text-white">Singapore</h3>
+                <p class="text-gray-300 text-sm mt-2">City lights, desert safari & nightlife.</p>
+                <p class="mt-3 text-yellow-400 font-semibold">4 Days • From $499</p>
+                <button class="mt-4 p-20 bg-yellow-500 hover:bg-yellow-400 text-black py-2 rounded-lg font-semibold transform transition hover:scale-110">
+                    Book Now
+                </button>
+            </div>
+        
+            <div class="bg-black border text-center border-yellow-500 rounded overflow-hidden transform transition duration-300 hover:scale-110">
+                <img src="/image/japan.jpeg" class="w-full h-48 object-cover" />
+                <h3 class="text-xl font-bold text-white">Japan</h3>
+                <p class="text-gray-300 text-sm mt-2">Overwater villas & crystal-clear waters.</p>
+                <p class="mt-3 text-yellow-400 font-semibold">6 Days • From $749</p>
+                <button class="mt-4 p-20 bg-yellow-500 hover:bg-yellow-400 text-black py-2 rounded-lg font-semibold transform transition hover:scale-110">
+                    View Details
+                </button>
+            </div>
+        </div>
+    </section>
+
+    
+
+  <!-- ABOUT SECTION -->
+    <section id="about" class="max-w-full bg-slate-300 mx-auto py-20 px-6 text-center">
+        <h2 class="text-3xl font-bold text-gray-900 mb-6">About Us</h2>
+        <p class="max-w-3xl mx-auto mb-8 text-gray-600 text-sm">We provide luxury travel packages, easy planning tools, and unforgettable experiences with top-tier travel arrangements.</p>
+        <button class="bg-yellow-400 text-black px-6 py-3 rounded text-sm hover:bg-yellow-600 transition-all">Learn More</button>
+    </section>
+
+
+ <!-- STATS SECTION -->
+<section class="py-20 bg-black/90 text-center">
+  <h2 class="text-3xl font-bold text-yellow-400 mb-12">Our Achievements</h2>
+  
+  <div class="grid grid-cols-1 md:grid-cols-4 gap-10">
+
+    <div>
+      <h3 class="text-4xl font-bold text-yellow-400 counter" data-target="10000">0</h3>
+      <p class="text-gray-300 mt-2">Happy Travelers</p>
+    </div>
+
+    <div>
+      <h3 class="text-4xl font-bold text-yellow-400 counter" data-target="40">0</h3>
+      <p class="text-gray-300 mt-2">Destinations</p>
+    </div>
+
+    <div>
+      <h3 class="text-4xl font-bold text-yellow-400 counter" data-target="5">0</h3>
+      <p class="text-gray-300 mt-2">Years Experience</p>
+    </div>
+
+    <div>
+      <h3 class="text-4xl font-bold text-yellow-400 counter" data-target="200">0</h3>
+      <p class="text-gray-300 mt-2">Tours Completed</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- CONTACT FORM -->
+<section id="contactForm" class="bg-slate-200 py-20 px-6">
+  <h2 class="text-3xl text-center font-bold text-gray-900 mb-8">Contact Us</h2>
+
+  <form class="max-w-3xl mx-auto bg-white p-8 shadow-xl rounded-xl space-y-6">
+
+    <input type="text" placeholder="Full Name" class="w-full p-3 rounded border border-gray-300" required>
+
+    <input type="email" placeholder="Email Address" class="w-full p-3 rounded border border-gray-300" required>
+
+    <select class="w-full p-3 rounded border border-gray-300">
+      <option>General Inquiry</option>
+      <option>Booking Support</option>
+      <option>Travel Package Request</option>
+      <option>Refund / Complaint</option>
+    </select>
+
+    <textarea rows="5" placeholder="Your Message" class="w-full p-3 rounded border border-gray-300"></textarea>
+
+    <button class="w-full bg-yellow-500 text-black p-3 rounded-lg font-bold hover:bg-yellow-600">
+      Send Message
+    </button>
+  </form>
+</section>
+
+<!-- FAQ -->
+<section class="py-20 bg-black/80 text-white px-6">
+  <h2 class="text-3xl text-yellow-400 font-bold text-center mb-10">Frequently Asked Questions</h2>
+
+  <div class="max-w-3xl mx-auto space-y-4">
+
+    <div class="bg-black border border-yellow-500 p-4 rounded cursor-pointer" onclick="toggleFAQ(1)">
+      <h3 class="font-bold">How do I book a trip?</h3>
+      <p id="faq1" class="hidden mt-2 text-gray-300">Choose a package, fill the form, and we’ll contact you instantly.</p>
+    </div>
+
+    <div class="bg-black border border-yellow-500 p-4 rounded cursor-pointer" onclick="toggleFAQ(2)">
+      <h3 class="font-bold">Can I get a refund?</h3>
+      <p id="faq2" class="hidden mt-2 text-gray-300">Refunds are available depending on policy and timing.</p>
+    </div>
+
+    <div class="bg-black border border-yellow-500 p-4 rounded cursor-pointer" onclick="toggleFAQ(3)">
+      <h3 class="font-bold">Do you offer group discounts?</h3>
+      <p id="faq3" class="hidden mt-2 text-gray-300">Yes! Groups of 5+ get special pricing.</p>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- CHAT WIDGET -->
+<div id="chatBubble"
+     class="fixed bottom-6 right-6 bg-yellow-400 text-black p-4 rounded-full shadow-xl cursor-pointer">
+    💬
+</div>
+
+<div id="chatBox"
+     class="hidden fixed bottom-20 right-6 w-64 bg-white text-black p-4 rounded-xl shadow-2xl">
+    <p class="font-bold mb-2">Live Chat</p>
+    <textarea class="w-full p-2 h-24 border rounded" placeholder="Type your message..."></textarea>
+    <button class="w-full mt-3 p-2 bg-yellow-500 rounded font-bold">Send</button>
+</div>
+
+
+
+  <!-- FOOTER -->
+  <footer id="contact" class="bg-black py-12 text-center">
+    <p class="text-gray-400">© 2025 BigGee Tech. All rights reserved.</p>
+  </footer>
+
+
+
+
+<script src="/src/scripts.js"></script>
+</body>
+</html>
